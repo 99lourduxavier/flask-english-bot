@@ -79,7 +79,7 @@ with open(fname, 'rt')as urls:
             # passing one url at a time from english.csv file
             all_common_english_sentence.update(extract_sentence(data))
 
-#creation of json file 
+#dump into json object
 if len(all_common_english_sentence) > 2:
     json_object = json.dumps(list(all_common_english_sentence))
     with open("sentence.json", "w") as outfile: 
