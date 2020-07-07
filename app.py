@@ -16,11 +16,8 @@ with open("sentence.json", "r") as read_file:
 def print_sentence(word):
     for item in word_in_sentence:
         if word in item:
-             return item  
-        else:
-            msg="word is not available"
-            return msg       
-
+            return item  
+        
 
 #root page 
 @app.route("/")
