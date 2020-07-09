@@ -24,11 +24,16 @@ with open("extract_word.json", "r") as read_file:
 
 #function to print sentence
 def print_sentence(word):
-        if word in word_in_sentence:
+    if word in word_in_sentence:
+        if word in wn.all_lemma_names():
             return (wn.synsets(word)[0].examples())
         else:
             msg=["cannot find example sentence for this word"]
-            return msg   
+            return msg  
+    else:
+        msg=["cannot find example sentence for this word"]
+        return msg 
+   
 
 
 #error handlers
